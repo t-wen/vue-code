@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">  
+<title>tracy</title>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{ site }}</p>
+</div>
+
+<script>
+var vm = new Vue({
+    el: '#app',
+    data: {
+        name: 'Google',
+        url: 'http://www.google.com'
+    },
+    computed: {
+        site: {
+            get: function () {
+                return this.name + ' ' + this.url
+            },
+            set: function (newValue) {
+                var names = newValue.split(' ')
+                this.name = names[0]
+                this.url = names[names.length - 1]
+            }
+        }
+    }
+})
+vm.site = '菜鸟教程 http://www.runoob.com';
+document.write('name: ' + vm.name);
+document.write('<br>');
+document.write('url: ' + vm.url);
+</script>
+</body>
+</html>

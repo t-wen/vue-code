@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">  
+<title>tracy</title>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <child message="hello!"></child>
+</div>
+
+<script>
+Vue.component('child', {
+    props: ['message'],
+    template: '<span>{{ message }}</span>'
+})
+new Vue({
+    el: '#app'
+})
+</script>
+</body>
+</html>

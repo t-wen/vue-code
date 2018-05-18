@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">  
+<title>My first Vue app</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="demo">
+        <div v-bind:style="styleObject">
+            <template v-if="loginType === 'username'">
+                <label>Username</label>
+                <input placeholder="Enter your username">
+            </template>
+            <template v-else>
+                <label>Email</label>
+                <input placeholder="Enter your email address">
+            </template>
+            <br>
+            <button v-on:click="label">Toggle login type</template>
+        </div>
+    </div>
+  
+
+  <script>
+    new Vue({
+        el: "#demo",
+        data: {
+            styleObject: {
+                color: 'red',
+                fontSize: '50px'
+            }
+        }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">  
+<title>My first Vue app</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <span>这个将不会改变： {{ msg }}</span>
+  </div>
+
+  <script>
+    new Vue({
+        el: '#app',
+        data: {
+            msg: 1
+        }
+    })
+  </script>
+</body>
+</html>

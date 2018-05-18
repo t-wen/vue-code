@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">  
+<title>My first Vue app</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="demo">
+        <div v-bind:style="styleObject">tracy</div>
+    </div>
+  
+
+  <script>
+    new Vue({
+        el: "#demo",
+        data: {
+            styleObject: {
+                color: 'red',
+                fontSize: '150px'
+            }
+        }
+    })
+  </script>
+</body>
+</html>
